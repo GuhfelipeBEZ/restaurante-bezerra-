@@ -1,8 +1,8 @@
 /* css geral  */
 body {
     font-family: "Open Sans" sans-serif;
-    background: #0c0b09;
-    color: #cac8c3;
+    background: #000000;
+    color: #837b7b;
 }
 
 a {
@@ -14,4 +14,155 @@ a:hover {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", serif;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #1a1814;
+}
+
+#preloader::before{
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #ffaa00;
+    border-top-color: #974cf2;
+    border-bottom-color: #974cf2;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* back toptop */
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    border: 2px solid #ffaa00;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    background: #ffaa00;
+    color: #000000;
+}
+
+.back-to-top:hover {
+    background: #ffaa00;
+    color: #000000;
+}
+
+.back-to-top:hover i {
+    color: gray;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+/* topbar */
+
+.topbar {
+    height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    z-index: 996;
+}
+#topbar .topbar-scrolled {
+    top: -40px;
+}
+#topbar .contact-info i {
+    font-style: normal;
+    color: #fda800;
+}
+#topbar .contact-info i span {
+    padding-left: 5px;
+    color: white;
+}
+
+/* header */
+
+#header {
+    background: rgba(12, 11, 9, 0.6);
+    border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+    transition: all 0.5s;
+    z-index: 996;
+    padding: 15px;
+    top: 40px;
+}
+#header.header-scrolled {
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #37332a;
+}
+/* logo em texto */
+#header .logo{
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "", serif;
+    
+}
+
+#header .logo a {
+    color: #7300ff;
+}
+
+/* tamanho para logo em imagem  */
+#header .logo img {
+    max-height: 40px;
+}
+
+/* botao reservas */
+
+.book-a-table-btn {
+    margin: 0 0 0 15px;
+    border: 2px solid #ffaa00;
+    color: #fda800;
+    border-radius: 50%;
+    padding: 8px 25px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transform: 0.3s;
+}
+
+.book-a-table-btn:hover {
+    background: #fda800;
+    color: #000000;
+}
+
+@media (max-width: 992px) {
+    .book-a-table-btn {
+        margin: 0 15px 0 0;
+        padding: 8px 20px;
+    }
 }
