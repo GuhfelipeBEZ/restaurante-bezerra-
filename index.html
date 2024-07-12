@@ -2,241 +2,420 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lanche do senai </title>
 
-  <title>Restaurante - Bezerra</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- VUE -->
+    <script src="./vue.js"> </script>
 
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Arquivos da net CSS  // vendor = fornecedor web -->
-  <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="vendor/aos/aos.css" rel="stylesheet">
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS -->
-  <link href="css/style.css" rel="stylesheet">
-
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- BARRA PARA TITULO  -->
+        <div class="container justify-content-center">
 
-  <!-- barra superior - top bar -->
-
-  <div id="topbar" class="d-flex  align-items-center fixed-top">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-
-      <div class="contact-info d-flex  align-items-center">
-        <i class="bi bi-whatsapp d-flex align-items-center">
-          <span> (11) 98765-4321</span>
-        </i>
-
-        <i class="bi bi-clock d-flex align-items-center ms-4">
-          <span>ter-sab: 11am - 23pm</span>
-        </i>
-
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- header -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-center-lg-between">
-
-      <h1 class="logo me-auto me-lg-0"> <a href="#"> Bezerra </a>
-      </h1>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li>
-            <a href="#hero" class="nav-link scrollto active"> home </a>
-          </li>
-          <li>
-            <a href="#about" class="nav-link scrollto "> sobre </a>
-          </li>
-          <li>
-            <a href="#menu" class="nav-link scrollto "> cardapio </a>
-          </li>
-          <li>
-            <a href="#especials" class="nav-link scrollto "> especiais </a>
-          </li>
-          <li>
-            <a href="#events" class="nav-link scrollto "> eventos </a>
-          </li>
-          <li>
-            <a href="#chefs" class="nav-link scrollto "> chefes </a>
-          </li>
-          <li>
-            <a href="#contant" class="nav-link scrollto "> contato </a>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"> </i>
-      </nav>
-      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex"> reservas</a>
-
-
-
-    </div>
-  </header><!-- fim header -->
-
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relavive text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-
-      <div class="row">
-        <div class="col-lg-8">
-          <h1> bem vindo ao <span>Restaurante Bezerra</span> </h1>
-          <h2>entregando boa comida desde 1900 e bolinha </h2>
-
-          <div class="btns">
-            <a href="#menu" class="btn-menu animated fadeInUp scrollto">cardapio</a>
-            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto"> reservas</a>
-          </div>
-        </div> <!-- fim col  -->
-
-        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relavive" data-aos="zoom-in"
-          data-aos-delay="200">
-
-          <a href="https://youtu.be/o4FL9UwiEjk?si=EFx9hffy49Fh2gjd" class="glightbox play-btn"></a>
+            <h1 class="navbar-brand mb-0 h1">
+                Monte o seu lanche </h1>
 
         </div>
-      </div> <!-- fim row -->
-    </div>
-  </section>
+    </nav>
 
-  <main id="main">
+    <div class="container">
 
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+        <div id="app">
 
-        <div class="row">
+            <div class="row">
 
-          <figure class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-md-6"> <!-- seção img -->
+                    <div class="row mt-2">
+                        <div class="col"><!--  propriedade computada -->
 
-            <div class="about-img">
-              <img src="img/about.jpg">
-            </div>
+                            <img :src="pao[0]"> <!-- v-bind  -->
+                            <img :src="alface">
+                            <img :src="ketchup">
+                            <img :src="mostarda">
+                            <img :src="maionese">
+                            <img :src="hamburguer">
+                            <img :src="pao[1]">
+                        </div>
+                    </div>
+                </div> <!-- FIM seção img -->
 
-          </figure>
+                <div class="col-md-6" v-if="etapa == 1">
+                    <!--  diretiva p/ renderização condicional  -->
 
-          <aside class="col-lg-6 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Lorem ipsum dolor sit amet.</h3>
+                    <!-- TIPO do Pão -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
 
-            <p class="fst-italic"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae hic dolor tempora
-              officia illo nisi voluptas ullam sint quaerat laborum, dignissimos incidunt ducimus modi sunt nobis ea rem
-              neque et?</p>
+                                <div class="card-header">
+                                    Tipo do Pão
+                                </div>
 
-            <ul>
-              <li> <i class="bi bi-check-circle"> Visão ! </i>
-              </li>
-              <li> <i class="bi bi-check-circle"> missão ! </i>
-              </li>
-              <li> <i class="bi bi-check-circle"> Valores ! </i>
-              </li>
+                                <div class="card-body">
 
-            </ul>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolorem commodi, deserunt quod
-              doloremque ea placeat quam vel esse? Repellendus iste similique ipsa quia possimus eos cumque ratione
-              facere cupiditate.</p>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" value="gergelim"
+                                            v-model="inputTipoPao">
+                                        <label class="form-check-label"> Gergelim </label>
 
-
-          </aside>
-
-        </div>
-      </div>
-    </section><!-- fim sobre -->
-    
-
-    <section id="why-us" class="why-us">
-      <div class="container">
-
-        <div class="section-title">
-          <h2> por que nós</h2>
-          <p> por isso e aquilo </p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-              <span>01</span>
-              <h4> qualidade 01</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi doloribus odio debitis
-                blanditiis, natus sit sunt, perspiciatis perferendis molestiae, praesentium laudantium? Explicabo
-                quaerat debitis nam laborum cum ullam error!</p>
-            </div>
-          </div> 
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="zoom-in" data-aos-delay="200">
-              <span>02</span>
-              <h4> qualidade 02</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi doloribus odio debitis
-                blanditiis, natus sit sunt, perspiciatis perferendis molestiae, praesentium laudantium? Explicabo
-                quaerat debitis nam laborum cum ullam error!</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="zoom-in" data-aos-delay="300">
-              <span>03</span>
-              <h4> qualidade 03</h4>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi doloribus odio debitis
-                blanditiis, natus sit sunt, perspiciatis perferendis molestiae, praesentium laudantium? Explicabo
-                quaerat debitis nam laborum cum ullam error!</p>
-            </div>
-          </div>
+                                    </div>
 
 
-        </div>
-      </div>
-    </section>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" value="australiano"
+                                            v-model="inputTipoPao">
+                                        <label class="form-check-label"> australiano </label>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!--Card Body Tipos de Pães -->
+
+                            </div> <!-- fim card -->
+                        </div>
+                    </div>
+                    <!-- FIM TIPO do Pão -->
+
+                    <!-- SALADA -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    salada
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" value="alface"
+                                            v-model="inputsalada">
+                                        <label class="form-check-label">
+                                            alface
+                                        </label>
+                                    </div>
+                                </div>
 
 
 
 
+                                <!-- Card Body Alface -->
+                            </div>
+                        </div>
+                    </div> <!-- FIM SALADA -->
+
+                    <!-- MOLHOS -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    Molhos
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" value="ketchup"
+                                            v-model="inputMolhos">
+                                        <label class="form-check-label">
+                                            ketchup
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" value="mostarda"
+                                            v-model="inputMolhos">
+                                        <label class="form-check-label">
+                                            mostarda
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" value="maionese"
+                                            v-model="inputMolhos">
+                                        <label class="form-check-label">
+                                            maionese
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Titulo Molhos -->
+
+                                <!-- Card Body Tipos de Molhos -->
+
+
+                            </div>
+                        </div>
+                    </div> <!--FIM MOLHOS -->
+
+                    <!-- Tipos Hamburguer -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+
+                                <div class="card-header">
+                                    tipo de Hamburguer
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" value="bovino"
+                                            v-model="inputHamburguer">
+                                        <label class="form-check-label">
+                                            bovino
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" value="frango"
+                                            v-model="inputHamburguer">
+                                        <label class="form-check-label">
+                                            frango
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" value="vegetal"
+                                            v-model="inputHamburguer">
+                                        <label class="form-check-label">
+                                            carne de mintirinha
+                                        </label>
+                                    </div>
 
 
 
 
 
+                                </div>
 
 
 
 
+                                <!-- TITULO - Tipos de Hamburguer -->
+
+                                <!-- Card Body Tipos de Hamburguer -->
 
 
-  </main>
+                            </div>
+                        </div>
+                    </div> <!-- Fim Tipos Hamburguer -->
+
+                    <!-- Fazer Pedido -->
+                    <div class="row mt-2">
+                        <!--     button    Fazer pedido    -->
+                        <div class="col d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary" @click="fazerPedido()">
+                                Fazer Pedido
+                            </button>
+                        </div>
+                    </div>
+                </div> <!-- Fim col md -->
+
+                <!-- etapa 2 -->
+                <div class="col-md-6" v-if="etapa == 2">
+                   <!--  diretiva p/ rensderização condicional  -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+                                <!-- Titulo Informe seus dados -->
+                                    <div class="card-header"> Informe seus Dados </div>
+                                <!-- card-body Informe seus dados -->
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label class="form-label"> Nome </label>
+                                            <input type="text" class="form-control" v-model="inputNome">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label"> Endereço </label>
+                                            <input type="text" class="form-control" v-model="inputEndereco">
+                                        </div> 
+
+                                    </div>
+                            </div> <!--  FIM card -->
+                        </div> <!-- col -->
+                    </div> <!-- row mt 2 -->
+
+                    <div class="row mt-2">
+                        <div class="col d-flex justify-content-between">
+                            <!-- Voltar para o Lanche  -->
+                            <button type="button" class="btn btn-warning" @click="etapa -=1"> 
+                                voltar para o lanche
+                            </button>
+                            
+                            <button type="button" class="btn btn-success" @click="confirmarPedido()">
+                                Confirmar
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div> <!-- fim col md 6 -->
+
+                <div class="col-md-6" v-if="etapa == 3">
+                    <!-- Pedido Confirmado -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+                                <!--  PEDIDO CONFIRMADO -->
+                                <div class="card-header">
+                                    pedido confirmado 
+                                </div>
+                                <div class="card-body">
+                                    <p>aguarde 10 minutos caso nao chegue o pedido 70denovo blzz</p>
+                                    <p>vamos te chamar em breve, caso nao chame ja sabe ne se 70denovo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repetir pedido -->
+                    <div class="row mt-2">
+                        <div class="col d-flex justify-content-between">
+                            <!-- button Repetir Pedido -->
+                            <button type="button" class="btn btn-primary" @click="etapa = 1"> 
+                                Repetir o Pedito
+                            </button>
+
+                            <button type="button" class="btn btn-success" @click="novoPedido()">
+                                Novo Pedido
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- fim ROW -->
+        </div> <!-- FIM APP -->
+    </div> <!-- FIM container -->
 
 
+    <!-- Inicio instancia VUE -->
+    <script>
+
+        const vm = new Vue({
+
+            el: '#app',
+
+            data: {
+                inputTipoPao: '',
+                inputsalada: [],
+                inputMolhos: [],
+                inputHamburguer: '',
+                etapa: 1, // v-if // 
+                inputNome:'',
+                inputEndereco:'',
+                novoPedidoAssincrono: '',
+            },
+            //propiedade computada//
+            computed: {
+                pao() { //array == lista / variedade //
+                    switch (this.inputTipoPao) {
+                        case 'gergelim':
+                            return ['imagens/pao_gergelim_superior.png', 'imagens/pao_gergelim_inferior.png']
+
+                        case 'australiano':
+                            return ['imagens/pao_australiano_superior.png', 'imagens/pao_australiano_inferior.png']
+
+                        default:
+                            return ['Imagens/padrao/pao_superior.png', 'imagens/padrao/pao_inferior.png']
+                    }
+                }, 
+
+                alface() {
+                    if (this.inputsalada.includes('alface')) {
+                        return 'imagens/alface.png'
+                    }
+                    return 'imagens/padrao/alface.png'
+                },
+                ketchup() {
+                    if (this.inputMolhos.includes('ketchup')) {
+                        return 'imagens/ketchup.png'
+                    }
+                    return 'imagens/padrao/molho.png'
+                },
+
+                mostarda() {
+                    if (this.inputMolhos.includes('mostarda')) {
+                        return 'imagens/mostarda.png'
+                    }
+                    return 'imagens/padrao/molho.png'
+                },
+
+                maionese() {
+                    if (this.inputMolhos.includes('maionese')) {
+                        return 'imagens/maionese.png'
+                    }
+                    return 'imagens/padrao/molho.png'
+                },
+                hamburguer() {
+                    switch (this.inputHamburguer) {
+                        case 'bovino':
+                            return 'imagens/bovino.png'
+                        case 'frango':
+                            return 'imagens/frango.png'
+                        case 'vegetal':
+                            return 'imagens/soja.png'
+                        default:
+                            return 'imagens/padrao/hamburguer.png'
+                    }
+
+                },
 
 
+            },
+            methods: {
+                fazerPedido() {
+                    //se pão e carne definidos 
+                    if (this.inputTipoPao && this.inputHamburguer) {
+                        this.etapa = 2 // avança p/ etapa fechar pedido 
+                    }
 
-  <!-- Vendor JS Files -->
-  <script src="vendor/aos/aos.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="vendor/php-email-form/validate.js"></script>
+                    else {
+                        alert('você precisa selecionar no minimo um pão e uma carne')
+                    }
+                },
+                confirmarPedido() {
+                    if(this.inputNome && this.inputEndereco) {
+                        this.etapa = 3
 
-  <!-- Template Main JS File -->
-  <script src="js/main.js"></script>
+                        this.novoPedidoAssincrono = setTimeout (() => this.novoPedido(), 10000)
+                    }
+
+                    else {
+                        alert('você precisa informar o seu nome e endereço')
+                    }
+                },
+                novoPedido() {
+                    this.etapa = 1
+
+                    this.inputTipoPao = ''
+                    this.inputsalada = []
+                    this.inputMolhos = []
+                    this.inputHamburguer = ''
+                    this.inputNome = ''
+                    this.inputEndereco = ''
+                },
+            },
+            watch: {
+                etapa(novoValor) {
+                    if(novoValor == 1){
+                        clearTimeout(this.novoPedidoAssincrono)
+                    }
+                },
+            },
+
+
+        })
+
+    </script>
 
 </body>
 
