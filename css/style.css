@@ -471,7 +471,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-bg {
-    background: rgb(107, 38, 38);
+    background: rgb(0, 0, 0);
 }
 .section-title {
     padding-bottom: 40px;
@@ -614,7 +614,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 50px 30px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
     transition: all ease-in-out 0.3s;
-    background:;
+    background: #000000;
 }
 
 .why-us .box span {
@@ -645,4 +645,38 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
 
-.why-us .box:hover
+.why-us .box:hover span,
+.why-us .box:hover h4,
+.why-us .box:hover p{
+    color: #ececec;
+}
+
+/*menu section*/ 
+
+.menu #menu-filters {
+    padding: 0;
+    margin: 0 auto 0 auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.menu #menu-filters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0px 12px 10px 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #ececec;
+    font-family: "playfair display", serif;
+    transition: all ease-in-out 0.3s;
+    border-radius: 50px;
+}
+
+.menu #menu-filters li:hover,
+.menu #menu-filters li.filters-active {
+    color: #be94f1;
+}
+
