@@ -465,7 +465,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* css gerral- sections */
 
-.section {
+section {
     padding: 60px 0;
     overflow: hidden;
 }
@@ -739,3 +739,34 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "poppins" sans-serif;
     color: rgba(255, 255, 255, 0.5);
 }
+
+/* pratos especiais */
+
+.specials {
+    overflow: hidden;
+}
+
+.specials .nav-tabs {
+    border: 0;
+}
+
+.specials .nav-link {
+    border: 0;
+    padding: 12px 15px;
+    color: #aaa;
+    border-radius: 0;
+    border-right: 2px solid #fda800;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.specials .nav-link:hover {
+    color: #fda800;
+}
+
+.specials .nav-link.active {
+    color: #000000;
+    background: #fda800;
+    border-color:  #fda800;
+}
+
