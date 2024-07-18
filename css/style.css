@@ -770,3 +770,25 @@ section {
     border-color:  #fda800;
 }
 
+.specials .tab-pane.active {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.specials .details h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fda800;
+}
+
+.specials .details p {
+    color: white;
+    text-align: justify;
+}
+
+@media (max-width: 992px) { 
+    .specials .nav-link {
+        border: 0;             
+        padding: 15px; 
+    }
+}
