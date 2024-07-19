@@ -554,7 +554,7 @@
             <div class="swiper-slide">
               <div class="row event-item">
                 <div class="col-lg-6">
-                  <img src="img/event-private.jpg" alt="" class="img-fluid" >
+                  <img src="img/event-private.jpg" alt="" class="img-fluid">
                 </div>
 
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
@@ -639,7 +639,50 @@
       </div>
     </section>
 
+    <!-- reserva -->
+    <section id="book-a-table" class="book-a-table">
+      <div class="container">
 
+        <div class="section-title">
+          <h2> reserva </h2>
+          <p>reserve sua mesa </p>
+        </div>
+
+        <!-- <form action="forms/book-a-table.php" method="post" > estrutura forms php -->
+        <form action="" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <!-- nome -->
+            <div class="col-lg-4 col-md-6 form-group">
+
+              <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" data-rule="minlen:3" data-msg="porfavor insira pelo menos 3 caracteries">
+              <div class="validate"></div>
+                
+            </div><!-- fim do nome  -->
+            
+            <!-- e-mail  -->
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+
+              <input type="email" class="form-control" name="email" id="email" placeholder="seu email" data-rule="email" data-ms="porfavor digite um email valido ">
+              <div class="validate"></div>
+            </div>
+
+            <!-- telefone -->
+
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="seu telefone" data-rule="minlen:11" data-msg="por favor digite o ddd e o numero completo ">
+            </div>
+            <div class="validate"></div>
+
+
+
+            
+          </div><!-- fim quantidade de pessoas -->
+        </form>
+
+
+      </div> <!-- fim container -->
+    </section>
 
 
 

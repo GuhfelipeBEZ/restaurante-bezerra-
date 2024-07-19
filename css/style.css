@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* topbar */
 
-.topbar {
+#topbar {
     height: 40px;
     font-size: 14px;
     transition: all 0.5s;
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 /* header */
 
 #header {
-    background: rgba(12, 11, 9, 0.6);
+    background: rgba(12, 11, 6, 0.6);
     border-bottom: 1px solid rgba(12, 11, 9, 0.6);
     transition: all 0.5s;
     z-index: 996;
@@ -816,10 +816,11 @@ section {
     position: relative;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 320px) {
     .events {
         background-attachment: fixed;
     }
+ }
 
     .events .events-carousel {
         background: rgba(255, 255, 255, 0.08);
@@ -868,6 +869,20 @@ section {
         margin-bottom: 0;
     }
 
-    
+    .events .swiper-pagination {
+        margin-top: 30px;
+        position: relative;
+    }
 
-}
+    .events .swiper-pagination .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    .events .swiper-pagination .swiper-pagination-bullet-active {
+        background: #cda45e;
+    }
+
+
+
